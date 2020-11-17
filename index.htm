@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="top-part">
+            <span id="cals"></span>
+            <span id="result"></span>
+        </div>
+        <div class="bottom-part">
+            <div class="line">
+                <div class="faiz x " onclick="faiz()">%</div>
+                <div class="plusminus x" onclick="plusminus()">+/-</div>
+                <div class="c x" onclick="ce()">C</div>
+                <div class="bolme x " onclick="bolme()">/</div>
+            </div>
+            <div class="line">
+                <div class="seven x " onclick="yeddi()">7</div>
+                <div class="eigth x " onclick="sekkiz()">8</div>
+                <div class="nine x " onclick="doqquz()">9</div>
+                <div class="vurma x " onclick="vurma()">x</div>
+            </div>
+            <div class="line ">
+                <div class="four x  " onclick="dord()">4</div>
+                <div class="five x  " onclick="bes()">5</div>
+                <div class="six x  " onclick="alti()" ()>6</div>
+                <div class="cixma x  " onclick="cixma()">-</div>
+            </div>
+            <div class="line ">
+                <div class="one x  " id="one" onclick="bir()">1</div>
+                <div class="two x  " onclick="iki()">2</div>
+                <div class="three x  " onclick="uc()">3</div>
+                <div class="plus x  " onclick="toplama()">+</div>
+            </div>
+            <div class="line tr ">
+                <div class="zero x  " onclick="sifir()">0</div>
+                <div class="vergul x " onclick="vergul()">,</div>
+                <div class="equal x " onclick="beraber()">=</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function bir() {
+            let bir = 1;
+            document.getElementById("cals").append(bir);
+        }
+
+        function iki() {
+            let bir = 2;
+            document.getElementById("cals").append(bir);
+        }
+
+        function uc() {
+            let bir = 3;
+            document.getElementById("cals").append(bir);
+        }
+
+        function dord() {
+            let bir = 4;
+            document.getElementById("cals").append(bir);
+        }
+
+        function bes() {
+            let bir = 5;
+            document.getElementById("cals").append(bir);
+        }
+
+        function alti() {
+            let bir = 6;
+            document.getElementById("cals").append(bir);
+        }
+
+        function yeddi() {
+            let bir = 7;
+            document.getElementById("cals").append(bir);
+        }
+
+        function sekkiz() {
+            let bir = 8;
+            document.getElementById("cals").append(bir);
+        }
+
+        function doqquz() {
+            let bir = 9;
+            document.getElementById("cals").append(bir);
+        }
+
+        function sifir() {
+            let bir = 0;
+            document.getElementById("cals").append(bir);
+        }
+
+        function vergul() {
+            let isare = "."
+            document.getElementById("cals").append(isare);
+        }
+
+        function toplama() {
+            let isare = "+"
+            document.getElementById("cals").append(isare);
+        }
+
+        function cixma() {
+            let isare = "-"
+            document.getElementById("cals").append(isare);
+        }
+
+        function vurma() {
+            let isare = "*"
+            document.getElementById("cals").append(isare);
+        }
+
+        function bolme() {
+            let isare = "/"
+            document.getElementById("cals").append(isare);
+        }
+
+        function faiz() {
+            let isare = "%"
+            document.getElementById("cals").append(isare);
+        }
+
+        function beraber() {
+            let qiymet = document.getElementById("cals").innerHTML;
+            document.getElementById("result").innerHTML = eval(qiymet);
+            document.getElementById("cals").innerHTML = eval(qiymet);
+        }
+
+        function ce() {
+            document.getElementById("cals").innerHTML = "";
+            document.getElementById("result").innerHTML = "";
+
+        }
+
+        function plusminus() {
+            let a = document.getElementById("cals").innerHTML;
+            if (Math.sign(a) == 1) {
+                a = -a;
+            } else if (Math.sign(a) == -1) {
+                a = -a;
+            }
+            document.getElementById("cals").innerHTML = a;
+            document.getElementById("result").innerHTML = a;
+        }
+    </script>
+</body>
+
+</html>
